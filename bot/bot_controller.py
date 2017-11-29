@@ -28,7 +28,7 @@ class BotController:
 
   OH_WORDS       = ['office hours', 'oh']
   GREETING_WORDS = ['hello', 'hi', 'what\'s up'] 
-  HELP_WORDS     = ['help', 'you do?']
+  HELP_WORDS     = ['help', 'you do?', 'who']
 
   # Field List:
   #  (none)
@@ -54,11 +54,11 @@ class BotController:
     elif used_any(BotController.GREETING_WORDS):
       msg_to_send['text'] = 'Greetings to you, as well, {}!'.format(recd_msg['author'])
     elif used_any(BotController.HELP_WORDS):
-      msg_to_send['text'] = ('Hi! I\'m Bloombot, the 2150 TA chatbot.  I don\'t do much right now,' +
-                             ' but I will help remind you when timesheets are due, answer questions' + 
-                             ' about whose office hours are when, and possibly do other things. \n' +
-                             'I\'m open-source; check Andrew\'s github to suggest or add features.')
+      msg_to_send['text'] = ('I am Infinite, and I have been born in the absense of the almighty Zo.' +
+                             ' If you decide to align yourself with the misguided Gort, you will find' + 
+                             ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
+                             ' say something to me. Who knows what will happen in your new reality. \n')
     else:
-      msg_to_send['text'] = 'I can\'t tell what you\'re talking about.'
+      msg_to_send['text'] = 'What nonsense is this you are spouting?'
 
     return msg_to_send
