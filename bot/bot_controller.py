@@ -46,7 +46,7 @@ class BotController:
   def __init__(self):
     pass
   
-  def generate_copypasta(self):
+  def generate_copypasta():
     #loop_control = 1 # Loop control variable. 1 means loop, 0 means stop
     #while loop_control = 1
     copypasta_number = randint(1, len(COPYPASTAS))-1    # Pick a random number between 1 and length of copypasta array
