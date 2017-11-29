@@ -17,6 +17,7 @@ def webhook():
   # We don't want to reply to ourselves!
   if data['name'] != 'Infinite':
     msg = '{}, you sent "{}".'.format(data['name'], data['text'])
+    for x in range(0, 2):
     send_message(msg)
 
   return "ok", 200
