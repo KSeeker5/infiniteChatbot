@@ -31,7 +31,8 @@ class BotController:
   HELP_WORDS     = ['help', 'you do?', 'who']
   
   COPYPASTA_WORDS = [
-    'copypasta', 'meme', 'gort', 'Gort'
+    'copypasta', 'meme', 'gort', 'Gort',
+    'test'
     ]
 
   # Field List:
