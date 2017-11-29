@@ -80,8 +80,9 @@ class BotController:
       msg_to_send['text'] = ''
       copypasta_counter = 0
       while copypasta_counter<num_of_copypastas:
-        msg_to_send['text'] = (msg_to_send['text'] + generate_copypasta())
-        msg_to_send['text'] = (msg_to_send['text'] + '\n\n')
+        #msg_to_send['text'] = (msg_to_send['text'] + generate_copypasta())
+        #msg_to_send['text'] = (msg_to_send['text'] + '\n\n')
+        msg_to_send['text'] += 'a'
         copypasta_counter+=1
     else:
       msg_to_send['text'] = 'What nonsense is this you are spouting?'
