@@ -1,3 +1,4 @@
+from random import *
 
 class BotController:
   # Static Members
@@ -34,6 +35,10 @@ class BotController:
     'copypasta', 'meme', 'gort', 'Gort',
     'test'
     ]
+  
+  COPYPASTAS = [
+    'qwertyuiopasdfghjklzxcvbnm'
+    ]
 
   # Field List:
   #  (none)
@@ -41,8 +46,11 @@ class BotController:
   def __init__(self):
     pass
   
-  def generate_copypasta(self, text):
-    result = 'hi'
+  def generate_copypasta(self):
+    #loop_control = 1 # Loop control variable. 1 means loop, 0 means stop
+    #while loop_control = 1
+    copypasta_number = randint(1, len(COPYPASTAS))    # Pick a random number between 1 and length of copypasta array
+    result = COPYPASTAS[copypasta_number]
     return result;
   
   def text_preprocessing(self, text):
@@ -68,7 +76,11 @@ class BotController:
                              ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
                              ' say something to me. Who knows what will happen in your new reality. \n')
     elif used_any(BotController.COPYPASTA_WORDS):
-      msg_to_send['text'] = 'WIP'
+      num_of_copypastas = randint(1, 5) #Pick a random number between 1 and 5
+      msg_to_send['text'] = ''
+      for i in range(0,num_of_copypastas):
+        msg_to_send['text'] += generate_copypasta()
+        msg_to_send['text'] += '\n\n'
     else:
       msg_to_send['text'] = 'What nonsense is this you are spouting?'
 
