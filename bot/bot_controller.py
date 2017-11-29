@@ -32,9 +32,13 @@ class BotController:
 
   # Field List:
   #  (none)
-
+  
   def __init__(self):
     pass
+  
+  def generate_copypasta(self, text):
+    result = 'hi'
+    return result;
   
   def text_preprocessing(self, text):
     return text.lower()
@@ -58,6 +62,8 @@ class BotController:
                              ' If you decide to align yourself with the misguided Gort, you will find' + 
                              ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
                              ' say something to me. Who knows what will happen in your new reality. \n')
+    elif used_any(BotController.COPYPASTA_WORDS):
+      msg_to_send['text'] = 'WIP'
     else:
       msg_to_send['text'] = 'What nonsense is this you are spouting?'
 
