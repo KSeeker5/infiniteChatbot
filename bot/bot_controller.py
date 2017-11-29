@@ -30,10 +30,9 @@ class BotController:
   GREETING_WORDS = ['hello', 'hi', 'what\'s up'] 
   HELP_WORDS     = ['help', 'you do?', 'who']
   
-  COPYPASTA_WORDS = 
-  [
-    'copypasta'
-  ]
+  COPYPASTA_WORDS = [
+    'copypasta', 'meme', 'gort', 'Gort'
+    ]
 
   # Field List:
   #  (none)
