@@ -18,7 +18,7 @@ def webhook():
   data = request.get_json()
 
   # We don't want to reply to ourselves, and must mention us!
-  if data['name'] != 'Bloombot' and 'bloombot' in data['text'].lower():
+  if data['name'] != 'Infinite' and 'infinite' in data['text'].lower():
     msg = {}
     msg['author']    = data['name']
     msg['author_id'] = data['sender_id']
@@ -42,14 +42,14 @@ def canned_webhook():
 
 def send_message(msg):
   if 'BLOOMBOT_DEBUG' in os.environ:
-    print('[Bloombot]: ' + msg)
+    print('[Infinite]: ' + msg)
     return
     
   # if not in debug mode, use the right url 
   url  = 'https://api.groupme.com/v3/bots/post'
 
   data = {
-          'bot_id' : os.getenv('GROUPME_BOT_ID'),
+          'bot_id' : 'd166405f1751e36deebf1a9b15',
           'text'   : msg,
          }
   request = Request(url, urlencode(data).encode())
