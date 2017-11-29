@@ -78,9 +78,11 @@ class BotController:
     elif used_any(BotController.COPYPASTA_WORDS):
       num_of_copypastas = randint(1, 5) #Pick a random number between 1 and 5
       msg_to_send['text'] = ''
-      for i in range(0,num_of_copypastas):
+      copypasta_counter = 0
+      while copypasta_counter<num_of_copypastas:
         msg_to_send['text'] += generate_copypasta()
         msg_to_send['text'] += '\n\n'
+        copypasta_counter+=1
     else:
       msg_to_send['text'] = 'What nonsense is this you are spouting?'
 
