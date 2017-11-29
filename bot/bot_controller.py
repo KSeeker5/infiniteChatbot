@@ -37,7 +37,7 @@ class BotController:
     ]
   
   COPYPASTAS = [
-    'qwertyuiopasdfghjklzxcvbnm'
+    'qwertyuiopasdfghjklzxcvbnm','mnbvcxzlkjhgfdsapoiuytrewq'
     ]
 
   # Field List:
@@ -50,7 +50,7 @@ class BotController:
     #loop_control = 1 # Loop control variable. 1 means loop, 0 means stop
     #while loop_control = 1
     copypasta_number = randint(1, len(COPYPASTAS))-1    # Pick a random number between 1 and length of copypasta array
-    result = copypasta_number #COPYPASTAS[copypasta_number]
+    result = COPYPASTAS[copypasta_number]
     return result;
   
   def text_preprocessing(self, text):
@@ -80,8 +80,8 @@ class BotController:
       msg_to_send['text'] = ''
       copypasta_counter = 0
       while copypasta_counter<num_of_copypastas:
-        msg_to_send['text'] += generate_copypasta()
-        msg_to_send['text'] += '\n\n'
+        msg_to_send['text'] = (msg_to_send['text'] + generate_copypasta())
+        msg_to_send['text'] = (msg_to_send['text'] + '\n\n')
         copypasta_counter+=1
     else:
       msg_to_send['text'] = 'What nonsense is this you are spouting?'
