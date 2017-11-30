@@ -46,10 +46,10 @@ class BotController:
   def __init__(self):
     pass
   
-  def generate_copypasta():
+  #def generate_copypasta():
     #loop_control = 1 # Loop control variable. 1 means loop, 0 means stop
     #while loop_control = 1
-    return COPYPASTAS.__len__()
+    #return COPYPASTAS.__len__()
     #copypasta_number = randint(1, len(COPYPASTAS))-1    # Pick a random number between 1 and length of copypasta array
     #result = COPYPASTAS[copypasta_number]
     #return result
@@ -81,7 +81,9 @@ class BotController:
       msg_to_send['text'] = ''
       copypasta_counter = 0
       while copypasta_counter<num_of_copypastas:
-        msg_to_send['text'] += generate_copypasta()
+        copypasta_number = randint(1, len(COPYPASTAS))-1    # Pick a random number between 1 and length of copypasta array
+        generated_copypasta = COPYPASTAS[copypasta_number]
+        msg_to_send['text'] += generated_copypasta
         msg_to_send['text'] += '\n\n'
         #msg_to_send['text'] += 'a'
         copypasta_counter+=1
