@@ -68,9 +68,8 @@ class BotController:
 
     # Use some hard-coded rules to decide what this message says
     #if 'when' in text and used_any(BotController.OH_WORDS):
-    if 1=2:
-      msg_to_send['text'] = 'You\'re asking about someone\'s office hours!'
-    elif used_any(BotController.GREETING_WORDS):
+      #msg_to_send['text'] = 'You\'re asking about someone\'s office hours!'
+    if used_any(BotController.GREETING_WORDS):
       msg_to_send['text'] = 'Greetings to you, as well, {}!'.format(recd_msg['author'])
     elif used_any(BotController.HELP_WORDS):
       msg_to_send['text'] = ('I am Infinite, and I have been born in the absense of the almighty Zo.' +
