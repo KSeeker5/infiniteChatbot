@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import random
 
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -24,9 +25,11 @@ def webhook():
     msg['author_id'] = data['sender_id']
     msg['text']      = data['text']
 
-    reply = bi.process_message(msg)
-    if reply:
-      send_message(reply['text'])
+    messageCounter = 0
+    while messageCounter<randomint(1,5):
+      reply = bi.process_message(msg)
+      if reply:
+        send_message(reply['text'])
 
   return "ok", 200
 
