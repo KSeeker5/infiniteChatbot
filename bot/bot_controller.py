@@ -83,8 +83,8 @@ class BotController:
       while copypasta_counter<num_of_copypastas:
         #copypasta_number = randint(0, len(COPYPASTAS)-1)    # Pick a random number between 0 and length of copypasta array (minus 1)
         copypasta_number = randint(0, 1)    # Pick a random number between 0 and length of copypasta array (minus 1)
-        generated_copypasta = COPYPASTAS[copypasta_number]
-        msg_to_send['text'] += generated_copypasta
+        #generated_copypasta = COPYPASTAS[copypasta_number]
+        #msg_to_send['text'] += generated_copypasta
         msg_to_send['text'] += '\n\n'
         #msg_to_send['text'] += 'a'
         copypasta_counter+=1
