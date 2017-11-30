@@ -25,12 +25,10 @@ def webhook():
     msg['author_id'] = data['sender_id']
     msg['text']      = data['text']
 
-    messageCounter = 0
-    while messageCounter<randint(1,5):
-      reply = bi.process_message(msg)
-      messageCounter += 1
-      if reply:
-        send_message(reply['text'])
+    
+    reply = bi.process_message(msg)
+    if reply:
+      send_message(reply['text'])
 
   return "ok", 200
 
