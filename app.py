@@ -26,8 +26,9 @@ def webhook():
     msg['text']      = data['text']
 
     messageCounter = 0
-    while messageCounter<randomint(1,5):
+    while messageCounter<randint(1,5):
       reply = bi.process_message(msg)
+      messageCounter += 1
       if reply:
         send_message(reply['text'])
 
