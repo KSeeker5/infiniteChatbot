@@ -67,7 +67,8 @@ class BotController:
     used_any = lambda word_list: any(map(lambda x : x in text, word_list))
 
     # Use some hard-coded rules to decide what this message says
-    if 'when' in text and used_any(BotController.OH_WORDS):
+    #if 'when' in text and used_any(BotController.OH_WORDS):
+    if 1=2:
       msg_to_send['text'] = 'You\'re asking about someone\'s office hours!'
     elif used_any(BotController.GREETING_WORDS):
       msg_to_send['text'] = 'Greetings to you, as well, {}!'.format(recd_msg['author'])
@@ -84,7 +85,7 @@ class BotController:
         #copypasta_number = randint(0, len(COPYPASTAS)-1)    # Pick a random number between 0 and length of copypasta array (minus 1)
         copypasta_number = randint(0, 1)    # Pick a random number between 0 and length of copypasta array (minus 1)
         #generated_copypasta = COPYPASTAS[copypasta_number]
-        #msg_to_send['text'] += generated_copypasta
+        msg_to_send['text'] += 'd' #generated_copypasta
         msg_to_send['text'] += '\n\n'
         #msg_to_send['text'] += 'a'
         copypasta_counter+=1
