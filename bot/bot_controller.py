@@ -111,6 +111,8 @@ class BotController:
         msg_to_send['text'] += choice(BotController.COPYPASTA_VALUES) #generated_copypasta
         msg_to_send['text'] += '\n\n'
         #msg_to_send['text'] += 'a'
+        if copypasta_counter != num_of_copypastas-1
+          #Do things
         copypasta_counter+=1
     #else:
       #msg_to_send['text'] = 'What nonsense is this you are spouting?'
