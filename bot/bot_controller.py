@@ -101,7 +101,7 @@ class BotController:
                              ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
                              ' say something to me. Who knows what will happen in your new reality. \n')
     else# used_any(BotController.COPYPASTA_WORDS):
-      num_of_copypastas = randint(1, 5) #Pick a random number between 1 and 5
+      num_of_copypastas = 1 #randint(1, 5) #Pick a random number between 1 and 5
       msg_to_send['text'] = ''
       copypasta_counter = 0
       while copypasta_counter<num_of_copypastas:
@@ -109,10 +109,8 @@ class BotController:
         #copypasta_number = randint(0, 1)    # Pick a random number between 0 and length of copypasta array (minus 1)
         #generated_copypasta = COPYPASTA_VALUES[copypasta_number]
         msg_to_send['text'] += choice(BotController.COPYPASTA_VALUES) #generated_copypasta
-        msg_to_send['text'] += '\n\n'
+          #msg_to_send['text'] += '\n\n'
         #msg_to_send['text'] += 'a'
-        if copypasta_counter != num_of_copypastas-1
-          #Do things
         copypasta_counter+=1
     #else:
       #msg_to_send['text'] = 'What nonsense is this you are spouting?'
